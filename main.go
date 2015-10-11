@@ -15,6 +15,7 @@ func main() {
 		fmt.Println("Got error:", err.Error())
 		return
 	}
+	fmt.Println(repo)
 	/*
 		watcher_delay, err := time.ParseDuration("15s")
 		if err != nil {
