@@ -1,0 +1,10 @@
+{
+	"ImportPath": "github.com/Primer42/docker-git-build",
+	"GoVersion": "go1.5",
+	"Deps": [
+		{
+			"ImportPath": "github.com/libgit2/git2go",
+			"Rev": "22da351b1e470074df1ba3f4c872d0b64c6b2046"
+		}
+	]
+}

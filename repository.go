@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/libgit2/git2go"
+	"github.com/Primer42/docker-git-build/Godeps/_workspace/src/github.com/libgit2/git2go"
 )
 
 type Repository struct {
