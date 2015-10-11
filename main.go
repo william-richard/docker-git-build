@@ -10,14 +10,11 @@ type Config struct {
 }
 
 func main() {
-	fmt.Println("Hello")
 	repo, err := NewRepository("/tmp/whatever/hello", "git@github.com:Primer42/test.git")
 	if err != nil {
 		fmt.Println("Got error:", err.Error())
 		return
 	}
-	fmt.Println(repo)
-	fmt.Println("World")
 	/*
 		watcher_delay, err := time.ParseDuration("15s")
 		if err != nil {

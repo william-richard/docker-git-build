@@ -15,20 +15,15 @@ type Repository struct {
 
 func NewRepository(clone_path string, remote_url string) (Repository, error) {
 	var myrepo Repository
-	fmt.Println("Got into NewRepository")
 	// ensure the parent of the clone_path exists
 	clone_path = filepath.Clean(clone_path)
 	// MkdirAll will do nothing if the dir already exists
 	os.MkdirAll(clone_path, 0755)
-	fmt.Println("Made parent. Cloning repo")
 	// Ensure the repo has been initialized
 	git_repo, err := git.InitRepository(clone_path, false)
 	if err != nil {
 		return myrepo, fmt.Errorf("Error initializing repo:", err.Error())
 	}
-	fmt.Println("initialized repo")
-
-	fmt.Println("Starting to add remote")
 	// ensure the remote on the repo matches the requested remote
 	// TODO add support for multiple remotes. Does that mean multiple watchers?
 	// remove all the existing remotes
